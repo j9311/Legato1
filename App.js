@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
@@ -8,18 +8,18 @@ export default function App() {
 
     <ImageBackground source={require('./assets/background.jpg')} style={styles.container}>
       <View style={styles.overlay}>
-      <StatusBar style="auto" />
+      
       </View>
 
 
       <Text style={styles.legato}>Legato</Text>
-      
+    
       <Text style={styles.text}>Create</Text>
-        {'\n'}
+        
       <Text style={styles.text}>Connect</Text>
-      {'\n'}
+        
       <Text style={styles.text}>Collaborate</Text>
-
+    
 
       <TouchableOpacity onPress={() => console.log('Thanks for visiting!')} style={styles.button} accessibilityLabel="Use this to sign in to or sign up for Legato!">
         <Text style={styles.buttonText}>Sign in / Join</Text>
@@ -42,24 +42,22 @@ const styles = StyleSheet.create({
   }, 
   legato: {
     color: 'white', 
-    fontSize: 54,
+    fontSize: 60,
     fontWeight: 'bold',
     justifyContent: 'center',
-    fontFamily: 'Georgia',
     fontStyle: 'italic',
-    marginBottom: 135,
-    zIndex: 0
+    marginBottom: 105,
+    zIndex: 0,
   },
   text: {
     display: 'flex',
     color: 'white',
-    fontSize: 35,
+    fontSize: 37,
     alignSelf: 'baseline',
     fontWeight: 'bold',
-    marginLeft: 55,
+    marginLeft: 75,
     marginTop: 9,
     marginBottom: 10,
-    fontFamily: 'Arial',
     zIndex: 0,
   },
   overlay: {
@@ -85,7 +83,8 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 17,
     color: '#fff',
-    textAlignVertical: 'center'
+    textAlignVertical: 'center',
+    textAlign: 'center'
   }, 
   
 });
